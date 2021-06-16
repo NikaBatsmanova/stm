@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+</head>
+<body>
+
+<script src="index.js"></script>
+
+<div id="wrapper">
+    <div id="header-wrapper">
+        <header>
+            <div id="logo">
+
+            </div>
+            <menu>
+                <ul>
+                    <li><a href="index.html">Тестовое задание на позицию Junior FrontEnd Developer.</a></li>
+                </ul>
+            </menu>
+        </header>
+    </div>
+
+    <div id="page-wrapper">
+        <section>
+            <form>
+                <p>Введите имя пользователя.</p>
+                <input autofocus id="mySearch" onkeyup="Debounce(Users(), 1000)" placeholder="Search.." size="40"
+                       title="Type in a category" type="text">
+                <a class="gradient-button" href="" onclick=Discharge()>Сброс</a>
+            </form>
+            <p></p>
+            <div class="preloader">
+                <div class="preloader__row">
+                    <div class="preloader__item"></div>
+                    <div class="preloader__item"></div>
+                </div>
+            </div>
+            <table border="1" cellpadding="5" id="table_user" width="100%">
+                <caption>Таблица пользователей</caption>
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Picture</th>
+                    <th>Location</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Registered date</th>
+                </tr>
+                </thead>
+            </table>
+        </section>
+    </div>
+
+
+</div>
+<footer>
+    <p>&copy; Untitled. All rights reserved. Design by Nika Batsmanova. </p>
+</footer>
+</body>
+</html>
+

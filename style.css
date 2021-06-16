@@ -1,0 +1,250 @@
+footer {
+    height: 100px;
+    margin: 0 auto;
+    padding: 50px 0px 15px 0px;
+}
+
+footer p {
+    text-shadow: 1px 1px 0px #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    color: #4D565E;
+}
+
+body {
+    margin: 50px 0px 0px 0px;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #8F8F8F;
+}
+
+header {
+    width: 100%;
+    height: 10%;
+    margin: 0 auto;
+    padding: 0px 0px;
+}
+
+menu {
+    float: right;
+    width: 70%;
+    height: 80px;
+    padding: 20px 40px 0px 0px;
+}
+
+menu ul {
+    width: 100%;
+    float: right;
+    margin: 0;
+    padding: 40px 0px 0px 0px;
+    list-style: none;
+    line-height: normal;
+}
+
+menu li {
+    width: 100%;
+    float: left;
+}
+
+menu a {
+    display: block;
+    margin-left: 1px;
+    padding: 7px 20px 7px 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #e8e2dc;
+}
+
+menu a:hover, menu .current_page_item a {
+    text-decoration: none;
+    background: #F08080;
+    box-shadow: inset 0px 0px 10px 5px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    color: #36332E;
+}
+
+section {
+    overflow: hidden;
+    width: 90%;
+    margin: 0px auto;
+    padding: 50px 40px;
+    color: #8F8F8F;
+}
+
+#wrapper {
+    overflow: hidden;
+    width: 70%;
+    margin: 0px auto;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .2);
+}
+
+#header-wrapper {
+    overflow: hidden;
+    height: 150px;
+    background: #292521;
+}
+
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+}
+
+.preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #337ab7;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preloader-bounce {
+
+    0%,
+    100% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+}
+
+.loaded .preloader {
+    display: none;
+}
+
+.gradient-button {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 7px 7px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-image: linear-gradient(to right, #FFB6C1 0%, #F08080 51%, #DC143C 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    transition: .5s;
+}
+
+.gradient-button:hover {
+    background-position: right center;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 14px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td:first-child {
+    background: #F08080;
+    color: white;
+    padding: 10px 20px;
+}
+
+th, td {
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    border-color: white;
+}
+
+td {
+    background: #FFC0CB;
+}
+
+th:first-child, td:first-child {
+    text-align: left;
+}
+
+ul {
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    left: 0px;
+    padding-inline-start: 0px;
+}
+
+ul span {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -70px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+ul span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+ul:hover span {
+    visibility: visible;
+    opacity: 1;
+}
